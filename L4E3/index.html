@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L4E3</title>
+    </head>
+    <body>
+        <form action="">
+        <output id="idOut"></output>
+        <br>
+        <br>
+        <button type="button" id="idbutton" onclick="calcule()" >Calcular</button>
+        </form>
+
+        <script>
+            function calcule(){
+                
+                let calculo= 0
+                let contador= ""
+            
+            
+                while (calculo> 21){
+                   
+                    contador= contador + calculo 
+                    calculo= calculo + 4
+                }
+                document.getElementById("idOut").value ="Inicio " + contador + "Acabou"
+                    }
+                   
+        </script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <header>
+        <h1>ESCOLA XPTO</h1>
+    </header>
+    <main> 
+        <form> 
+             <fieldset>
+                        <!--Cadastro -->
+                    <legend><h2>CADASTRO DO ALUNO</h2></legend>
+                    <label label for="idName">Nome</label> <br>
+                    <input type="text" id="idName" name="idName" placeholder="Nome do aluno(a)"  size="45" required> 
+                
+                    <br>
+                    <br>
+                
+                    <label label for="idSobrenome">Sobrenome</label> <br>
+                    <input type="text" id="idSobrenome" name="idName" placeholder="Sobrenome do aluno(a)" size="45" required>
+                
+                    <br>
+                    <br>
+                
+                    <label label for="idEmail">E-mail</label> <br>
+                    <input type="email" id="idEmail" name="idEmail" placeholder="E-mail do aluno(a)">
+                
+                    <br>
+                    <br>
+                
+                    <label label for="idDataNasc">Data Nascimento</label> <br>
+                    <input type="date" id="idDataNasc" name="nmDataNasc" min="2000-01-01"> 
+                
+                    <br>
+                    <br>
+                
+                    <input type="radio" id="Fem" name="nmGenero" value="F" checked>
+                    <label label for="idFem">Feminino</label> 
+                
+                    <input type="radio" id="Mas" name="nmGenero" value="M">
+                    <label label for="idMas">Masculino</label> 
+                
+                    <br>
+                    <br>
+                
+                    <label label for="idName">Nome do Responsavel</label> <br>
+                    <input type="text" id="idName" name="idName" placeholder="Nome do responsavel"  size="45" required>
+
+                    <br>
+                    <br>
+                    <label label for="idSobrenome">Sobrenome</label> <br>
+                    <input type="text" id="idSobrenome" name="idName" placeholder="Sobrenome do responsavel" size="45" required>
+                    <br>
+                    <br>
+                
+                    <label label for="idEmail">E-mail do Responsavel</label> <br>
+                    <input type="email" id="idEmail" name="idEmail" placeholder="E-mail do responsavel" required>
+                
+                    <br>
+                    <br>
+                
+                    <label label for="idBowsers">Alfabetização</label>
+                    <input list="idBowsers">
+                    <datalist id="idBowsers">
+                        <option value="Ensino fundamental incompleto">Ensino fundamental incompleto</option>
+                        <option value="Ensino fundamental completo">Ensino fundamental completo</option>
+                        <option value="Ensino medio incompleto">Ensino médio incompleto</option>
+                        <option value="Ensino medio completo">Ensino médio completo</option>
+                        <option value="Ensino superior incompleto">Ensino superior incompleto</option>
+                        <option value="Ensino superior completo">Ensino superior completo</option>
+                    </datalist>
+                
+                    <br>
+                    <br>
+                    <br>
+                
+                </fieldset>
+            
+                <fieldset>
+                    <legend><h2>ENDEREÇO</h2></legend>
+                    <label label for="idRua">Rua</label><br>
+                    <input type="idRua" name="idRua" placeholder="Rua" size="45" required>
+                    <br>
+                    <br>
+                    <label label for="idCidade">Cidade</label><br>
+                    <input type="idCidade" name="idCidade" placeholder="Cidade" size="45" required>
+                    <br>
+                    <br>
+                    <label label for="idEstado">Estado</label><br>
+                    <input type="idEstado" name="idCidade" placeholder="Estado" size="44" required>
+
+                </fieldset>
+                    <br>
+                    <br>
+                    <button type="submit">Submeter</button>
+                    <button type="reset">Resetar</button>
+        </form>
+    </main>
+        <script>
+
+            
+        </script>
+
+</body>
+</html>

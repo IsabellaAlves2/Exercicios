@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>L5E10</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="">
+       
+        <label for="idValor">Valor :</label>
+        <input type="number" id="idValor" name="nmValor"> 
+       
+        <br>
+        
+        <p>ESCOLHA UMA MOEDA PARA CONVERTER:</p>
+
+        <input type="radio" id="idReal" name="nmMoeda"  checked >
+        <label for ="idReal" >Real</label>
+
+        <br>
+        <br>
+
+        <input type="radio" id="idDolar" name="nmMoeda" >
+        <label for="idDolar">Dolar Americano</label> 
+
+        <br>
+        <br>
+
+        <input type="radio" id="idDollarC" name="nmMoeda" >
+        <label for="idDollarC">Dollar Canadense</label>
+
+        <br>
+        <br>
+
+        <input type="radio" id="idEuro" name="nmMoeda">
+        <label for="idEuro">Euro</label>
+
+        <br>
+        <br>
+
+        <input type="radio" id="idLibra" name="nmMoeda">
+        <label for="idLibra">Libra</label>
+
+        <br>
+        <br>
+
+
+
+        <button type="button" onclick="calcular( )" >Converter</button>
+
+        
+        <br>
+        <br>
+       
+        <output id="idOut1">Em Real:</output>
+       
+        <br>
+        <br>
+       
+        <output id="idOut2">Em Dolar Americano:</output>
+       
+        <br>
+        <br>
+       
+        <output id="idOut3">Em Dollar Canadense:</output>
+       
+        <br>
+        <br>
+
+        <output id="idOut4">Em Euro:</output>
+
+        <br>
+        <br>
+
+        <output id="idOut5">Em Libra:</output>
+
+
+        <Script>
+            function calcular() {
+                var Valor= Number(document.getElementById("idValor").value)
+                var isReal= document.getElementById("idReal").checked
+                var isDolar= document.getElementById("idDolar").checked
+                var isC = document.getElementById("idDollarC").checked
+                var isEuro = document.getElementById("idEuro").checked
+                var isLibra= document.getElementById("idLibra").checked
+                
+               //Conversão do real
+                if (isReal == true) {
+                    isDolar = Valor * 4,82 
+                    isC = Valor * 3.80
+                    isEuro = Valor * 5.13
+                    isLibra=Valor * 6.02
+                    document.getElementById("idOut2").value = "Em Dolar:" + isDolar
+                    document.getElementById("idOut3").value = "Em Dolar Canadense" + isC
+                    document.getElementById("idOut4").value = "Em Euro" + isEuro
+                    document.getElementById("idOut5").value ="Em Libra" + isLibra
+                }else
+                
+                //conversão do dolar
+                if (isDolar == true) {
+                       isReal=Valor /4.82
+                       isC=Valor * 1.27
+                       isEuro= Valor/ 0.94
+                       isLibra= Valor/0.80 
+                       document.getElementById("idOut1").value = "Em Real" + isReal
+                       document.getElementById("idOut3").value = "Em Dolar Canadense" + isC
+                        document.getElementById("idOut4").value = "Em Euro" + isEuro
+                        document.getElementById("idOut5").value ="Em Libra" + isLibra
+                   }else
+                  
+                  //conversão do dolar canadense
+                   if (isC == true) {
+                       isReal=Valor / 3.80
+                       isDolar=Valor
+                       
+                   }
+               
+            
+            }
+                //document.getElementById("idOut1").value = "Em Real:" + isReal
+                // document.getElementById("idOut2").value = "Em Dolar:" + isDolar
+                //document.getElementById("idOut3").value = "Em Dolar Canadense" + isC
+                  //  document.getElementById("idOut4").value = "Em Euro" + isEuro
+                    //document.getElementById("idOut5").value ="Em Libra" + isLibra
+                
+            
+        </Script>

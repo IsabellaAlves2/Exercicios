@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>L4E1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <output id="idOut"></output>
+
+
+    <script>
+        var contador= 5
+        var textocontador= " "
+        var out = document.getElementById("idOut")
+
+        console.log("Inicio...")
+        while(contador<10){
+            textocontador  = textocontador + contador + " "
+
+            console.log("while " + contador)
+            contador++ 
+            }
+            console.log("Fim...");
+
+            out.value = "Inicio " + textocontador + " Fim..."
+
+            do {
+              console.log("do While " + contador);  
+              contador--
+            } while (contador > 0)
+
+            for (let ind = 0; ind < 10; ind++) {
+                console.log("For " + ind)  
+            }
+        
+    </script>
+</body>
+</html>

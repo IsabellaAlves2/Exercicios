@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>L4E6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="">
+        <output id="idOut"></output>
+        <br>
+        <br>
+        <button type="button" id="idbutton" onclick="calcule()" >Calcular</button>
+        </form>
+        
+        |<script>
+        
+        
+        function calcule (){
+            
+            var calculo= 30
+            var contador=" "
+           
+           
+            while (calculo>=1){
+                contador= contador+calculo+ " "
+                calculo--
+                if ((calculo % 4) == 0) {
+                    contador = contador + "[" + calculo + "] "
+                } else {
+                    contador = contador + calculo + " "
+                }
+            }
+            document.getElementById("idOut").value ="Inicio " + contador + "Acabou"
+         }
+    
+        </script> 
+    </body>
+    </html>
+</body>
+</html>

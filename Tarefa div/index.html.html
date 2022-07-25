@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DIVI</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="">
+        <label for="idNum">Numero</label>
+        <input type="number" name="nmNum" id="idNum">
+
+        <br>
+        <br>
+
+        <output id="idOut">Resultado:</output>
+
+        <br><br>
+
+        <input type="button" value="Teste" onclick="dividir()">
+
+
+
+    </form>
+        
+    <script>
+        function dividir() {
+            var numero=Number(document.getElementById("idNum").value)
+            var resultado
+            
+            if(numero>20){
+                resultado =numero/2
+            } else{
+                resultado= numero 
+            }
+            
+            
+             
+            document.getElementById("idOut").value ="Resultado:" + resultado
+        }
+    </script>
+
+   
+</body>
+</html>

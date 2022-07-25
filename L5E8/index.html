@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>L5E8</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="">
+       
+        <label for="idCelsius">Graus Celsius:</label>
+        <input type="number" id="idCelsius" name="nmCelsius">
+       
+        <br>
+        <br>
+
+        <button type="button" onclick="calcular( )" >Converter</button>
+
+        <br>
+        <br>
+       
+        <output id="idOut">Em Fahrenheit:</output>
+    </form>
+
+        <script>
+            function calcular( ) {
+                var C = Number(document.getElementById("idCelsius").value)
+                var F=(9*C+160)/5
+
+                document.getElementById("idOut").value = "Resultado:" +F
+            }
+                
+           
+        </script>
+    
+</body>
+</html>

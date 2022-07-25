@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>L4E8</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="">
+        <label for="idValor1">Valor inicial:</label>
+        <br>
+        <input type="number" name="nmValor1" id="idValor1">
+
+            <br>
+            <br>
+
+        <label for="idValor2">Valor final:</label>
+        <br>
+        <input type="number" name="nmValor2" id="idValor2">
+            
+            <br>
+            <br>
+        
+        <label for="idAdicional">Numero adicional:</label>
+        <br>
+        <input type="number" name="nmAdicional" id="idAdicional">
+            <br>
+            <br>
+        <button type="button" onclick="Contar()">Contar Resultado</button>
+            <br>
+            <br>
+        <output id="idOut"></output>
+        
+       
+    </form>
+
+      <script>
+          function Contar() {
+              let limiteInf = Number(document.querySelector("#idValor1").value)
+              let limiteSup = Number(document.querySelector("#idValor2").value)
+              let passo = Number(document.querySelector("#idAdicional").value)
+              let textCont = ""
+              let cont = limiteInf
+               
+
+              while (cont< limiteSup) {
+                  textCont= textCont + cont + " "
+
+                  cont= cont + passo 
+                  
+              }
+
+              document.getElementById("idOut").value = "Incio" + textCont + "Fim"
+              
+          }
+      </script>
+    
+</body>
+</html>

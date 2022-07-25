@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>L5E9</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="">
+       
+        <label for="idValor">Valor :</label>
+        <input type="number" id="idValor" name="nmValor"> 
+       
+        <br>
+        
+        <p>ESCOLHA UMA TEMPERATURA INICIAL:</p>
+
+       
+
+        <input type="radio" id="idFahrenheit" name="nmTemperatura" >
+        <label for="idFahrenheit">Fahrenheit</label> 
+
+        <br>
+        <br>
+
+        <input type="radio" id="idCelsius" name="nmTemperatura"   >
+        <label for ="idCelsius" >Celsius</label>
+
+        <br>
+        <br>
+
+        <input type="radio" id="idKelvin" name="nmTemperatura" checked>
+        <label for="idKelvin">Kelvin</label>
+
+        <br>
+        <br>
+
+        <button type="button" onclick="calcular( )" >Converter</button>
+
+        <br>
+        <br>
+       
+        <output id="idOut1">Em Fahrenheit:</output>
+       
+        <br>
+        <br>
+       
+        <output id="idOut2">Em Celsius:</output>
+       
+        <br>
+        <br>
+       
+        <output id="idOut3">Em Kelvin:</output>
+       
+        <br>
+        <br>
+   
+    </form>
+
+        <script>
+            function calcular( ) {
+                var Valor= Number(document.getElementById("idValor").value)
+                var C = document.getElementById("idCelsius").checked
+                var F= document.getElementById("idFahrenheit").checked
+                var K= document.getElementById("idKelvin").checked
+
+
+                if (C == true) {
+                     F=(9*Valor+160)/5 
+                     K=Valor+273
+
+
+                     
+               document.getElementById("idOut1").value = "Em Fahrenheit:" + F 
+               document.getElementById("idOut3").value = "Em Kelvin:" + K
+               }else 
+               
+                  if (F==true) {
+                    C=5/9* (Valor-32)
+                    K= (Valor+ 459,67) /1.8
+
+                    document.getElementById("idOut2").value = "Em Celsius:" + C
+                    document.getElementById("idOut3").value = "Em Kelvin:" + K
+               }else
+
+                    if (K==true) {
+                     C= Valor + 273
+                     F= (Valor - 273) *1.8 + 32   
+                     
+                     document.getElementById("idOut1").value = "Em Fahrenheit:" + F 
+                     document.getElementById("idOut2").value = "Em Celsius:" + C
+                    }
+
+                
+               
+
+               
+               //K = (°F + 459,67) / 1,8
+               // ºF = 1.8 x (K - 273) + 32
+            }
+                
+           
+        </script>
+    
+</body>
+</html>

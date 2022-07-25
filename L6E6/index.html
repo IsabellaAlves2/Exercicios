@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>L6E6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+   <output id="idOut"></output>
+
+   <br>
+
+   <button type="button" id="idButton" onclick="sortear()">sortear</button>
+
+   <Script>
+        function sortear() {
+            var numero = []
+          
+            for (i=0; i< 7; i++) {
+                var numerotxt = parseInt(Math.random() * 101)
+            numero.push(numerotxt)
+               
+                
+            }
+            document.getElementById("idOut").value = numero
+        }    
+   </Script>
+</body>
+</html>
